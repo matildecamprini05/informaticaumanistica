@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- in head ci va per forza un elemento title, qui metto anche il foglio di stile e i metadati -->
+		<title> Le parole di Vincent van Gogh </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
+		<meta name="keywords" content="van Gogh, dipinti, lettere">
+		<meta name="author" content="Matilde Camprini">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="stile_vangogh.css">
+	</head>
+
+	<body>
+		<div>
+			<header class="bg_yellow"> 
+				<div class="header_img">
+					<a href="index.html">
+						<img src="img/autografo.svg.png" alt="Autografo di van Gogh" title="Autografo di van Gogh">
+					</a>
+				</div>
+				
+				<div class="topnav bg_yellow"> 
+					<a href="index.html"> <i class="fa">&#xf015;</i> Home </a>
+					<a href="progetto.html"> <i class="fa">&#xf1fc;</i> Progetto </a>
+					<a href="catalogo.html" class="pagina"> <i class="fa">&#xf12e;</i> Catalogo </a>
+					<a href="momenti.html"> <i class="fa">&#xf073;</i> I momenti </a>
+					<a href="luoghi.html"> <i class="fa">&#xf276;</i> I luoghi </a>
+					<a href="dati.html"> <i class="fa">&#xf085;</i> Dati </a>
+				</div>
+			</header>
+		</div>
+		<div class="row">
+<!-- left column -->
+			<div class="leftcolumn bg_yellow">
+<!-- breadcrumbs -->
+				<div> 
+					<ul class="breadcrumb">
+					  <li><a href="index.html">Home</a></li>
+					  <li>Catalogo</li>
+					</ul>
+				</div>
+<!-- side nav con accordion -->
+				<div class="sidenav">
+					<h3> Esplora </h3>
+					<button class="accordion">per date</button>
+					<div class="panel">
+						<ul>
+						  	<li><a href="#"> 29 settembre 1872 - 4 aprile 1876</a></li>
+						  	<li><a href="#"> 17 aprile 1876 - 12 aprile 1881</a></li>
+						  	<li><a href="#"> 30 aprile 1881 - 24 febbraio 1886</a></li>
+						  	<li><a href="#"> 28 febbraio 1886 - 23 luglio 1890</a></li>
+						</ul>
+					</div>
+					<button class="accordion">per luoghi</button>
+					<div class="panel">
+					  	<ul>
+						  	<li><a href="#"> Etten</a></li>
+						  	<li><a href="#"> Londra</a></li>
+						  	<li><a href="#"> Saint-Rémy-de-Provence</a></li>
+						  	<li><a href="#"> Auvers-sur-Oise</a></li>
+						</ul>
+					</div>		
+<!-- link utili -->
+					<h3> Link utili </h3>
+					<a href="https://it.wikipedia.org/wiki/Vincent_van_Gogh" target="_blank" title="Vai alla pagina wikipedia di van Gogh"> Vita di van Gogh </a>
+					<a href="https://www.vangoghmuseum.nl/en" target="_blank" title="Vai alla pagina ufficiale del museo di van Gogh"> Museo di van Gogh </a>
+					<a href="https://it.wikipedia.org/wiki/Theodorus_van_Gogh" target="_blank" title="Vai alla pagina wikipedia di Theo van Gogh"> Chi è Theo van Gogh? </a>
+					<a href="https://it.wikipedia.org/wiki/Postimpressionismo" target="_blank" title="Vai alla pagina wikipedia del postimpressionismo"> Il postimpressionismo </a>
+				</div>
+			</div>
+<!-- right column -->
+			<div class="rightcolumn bg_yellow">
+				<h1> Catalogo </h1>
+<!-- tab -->
+				<div class="tab">
+				  <button class="tablinks" onclick="openCity(event, 'lettere')">Naviga per lettere</button>
+				  <button class="tablinks" onclick="openCity(event, 'opere')">Naviga per opere</button>
+				</div>
+	<!-- tab content -->
+				<div id="lettere" class="tabcontent">
+		<!-- galleria -->
+					<div class="galleryrow">
+					  	<div class="column">
+						    <img src="#">
+						    <img src="#">
+						    <img src="#">
+					  	</div>
+					  	<div class="column">
+						    <img src="#">
+						    <img src="#">
+						    <img src="#">
+					  	</div>
+					  	<button> Mostra di più </button>
+					</div>
+				</div>
+				<div id="opere" class="tabcontent">
+				  	<div class="galleryrow">
+					  	<div class="column">
+						    <img src="#">
+						    <img src="#">
+						    <img src="#">
+					  	</div>
+					  	<div class="column">
+						    <img src="#">
+						    <img src="#">
+						    <img src="#">
+					  	</div>
+					  	<button> Mostra di più </button>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<!-- footer -->
+		<footer class="bg_teal">
+			<div class="credits"> 
+				<p> <a href="#" target="_blank">Credits</a> | <a href="#">Licenze </a>| <a href="progetto.html">Web Project Plan</a> </p>
+			</div>
+			<div class="copyright">
+				<p> &copy; Copyright (c) 2026 by Matilde Camprini. </p>
+				<p> <a href="#top"> Torna su </a></p>
+			</div>
+		</footer>
+		<script src="js/main.js"></script>	
+	</body>
