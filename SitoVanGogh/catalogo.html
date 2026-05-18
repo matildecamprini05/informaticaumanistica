@@ -18,7 +18,7 @@
 			<header class="bg_yellow"> 
 				<div class="header_img">
 					<a href="index.html">
-						<img src="img/autografo.svg.png" alt="Autografo di van Gogh" title="Autografo di van Gogh">
+						<img src="img/layout/autografo.svg.png" alt="Autografo di van Gogh" title="Autografo di van Gogh">
 					</a>
 				</div>
 				
@@ -26,7 +26,7 @@
 					<a href="index.html"> <i class="fa">&#xf015;</i> Home </a>
 					<a href="progetto.html"> <i class="fa">&#xf1fc;</i> Progetto </a>
 					<a href="catalogo.html" class="pagina"> <i class="fa">&#xf12e;</i> Catalogo </a>
-					<a href="momenti.html"> <i class="fa">&#xf073;</i> I momenti </a>
+					<a href="timeline.html"> <i class="fa">&#xf073;</i> I momenti </a>
 					<a href="luoghi.html"> <i class="fa">&#xf276;</i> I luoghi </a>
 					<a href="dati.html"> <i class="fa">&#xf085;</i> Dati </a>
 				</div>
@@ -45,7 +45,7 @@
 <!-- side nav con accordion -->
 				<div class="sidenav">
 					<h3> Esplora </h3>
-					<button class="accordion">per date</button>
+					<button class="accordion">Per date</button>
 					<div class="panel">
 						<ul>
 						  	<li><a href="#"> 29 settembre 1872 - 4 aprile 1876</a></li>
@@ -54,11 +54,11 @@
 						  	<li><a href="#"> 28 febbraio 1886 - 23 luglio 1890</a></li>
 						</ul>
 					</div>
-					<button class="accordion">per luoghi</button>
+					<button class="accordion">Per luoghi</button>
 					<div class="panel">
 					  	<ul>
-						  	<li><a href="#"> Etten</a></li>
-						  	<li><a href="#"> Londra</a></li>
+						  	<li><a href="#"> Nuenen</a></li>
+						  	<li><a href="#"> Arles</a></li>
 						  	<li><a href="#"> Saint-Rémy-de-Provence</a></li>
 						  	<li><a href="#"> Auvers-sur-Oise</a></li>
 						</ul>
@@ -73,42 +73,68 @@
 			</div>
 <!-- right column -->
 			<div class="rightcolumn bg_yellow">
-				<h1> Catalogo </h1>
+				<div class="top_catalogo">
+					<h1> Catalogo </h1>
+				</div>
 <!-- tab -->
 				<div class="tab">
-				  <button class="tablinks" onclick="openCity(event, 'lettere')">Naviga per lettere</button>
-				  <button class="tablinks" onclick="openCity(event, 'opere')">Naviga per opere</button>
+				  <button class="tablinks" onclick="openCity(event, 'lettere')">Naviga per lettere </button>
+				  <button class="tablinks" onclick="openCity(event, 'opere')">Naviga per opere </button>
 				</div>
 	<!-- tab content -->
 				<div id="lettere" class="tabcontent">
 		<!-- galleria -->
 					<div class="galleryrow">
 					  	<div class="column">
-						    <img src="#">
-						    <img src="#">
-						    <img src="#">
+						    <img src="img/lettere/lettera_10_9_1888.png">
+							<p> Arles, 10 settembre 1888 </p>
+							<img src="img/lettere/lettera_16_10_1888.png">
+						    <p> Arles, 16 ottobre 1888 </p>
+            				<img src="img/lettere/lettera_1885.jpeg">
+            				<p> Nuenen, 9 aprile 1885 </p>
 					  	</div>
 					  	<div class="column">
-						    <img src="#">
-						    <img src="#">
-						    <img src="#">
+						    <img src="img/lettere/lettera_22_3_1889.png">
+						    <p> Arles, 22 marzo 1889 </p>
+            				<img src="img/lettere/lettera_23_12_1888.png">
+            				<p> Arles, 23 dicembre 1888 </p>
+           					<a href="item.html"><img src="img/lettere/lettera_23_7_1890.png"></a>
+           					<p> Auvers-sur-Oise, 23 luglio 1890 </p>
 					  	</div>
-					  	<button> Mostra di più </button>
+					  	<ul class="pagination">
+							<li><a href="#">&laquo;</a></li>
+							<li><a class="active" href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
 					</div>
 				</div>
 				<div id="opere" class="tabcontent">
 				  	<div class="galleryrow">
 					  	<div class="column">
-						    <img src="#">
-						    <img src="#">
-						    <img src="#">
+						    <img src="img/dipinti/campo_di_grano_con_corvi.jpg">
+						    <p> Campo di grano con volo di corvi </p>
+					        <img src="img/dipinti/girasoli.jpg">
+					        <p> Girasoli </p>
+					        <img src="img/dipinti/la_camera_di_vincent.jpg">
+					        <p> La camera di Vincent ad Arles </p>
 					  	</div>
 					  	<div class="column">
-						    <img src="#">
-						    <img src="#">
-						    <img src="#">
+						    <img src="img/dipinti/la_casa_gialla.jpg">
+						    <p> La casa gialla </p>
+            				<img src="img/dipinti/mangiatori_di_patate.jpg">
+            				<p> I mangiatori di patate </p>
+            				<img src="img/dipinti/iris.jpg">
+            				<p> Iris </p>
 					  	</div>
-					  	<button> Mostra di più </button>
+					  	<ul class="pagination">
+							<li><a href="#">&laquo;</a></li>
+							<li><a class="active" href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
 					</div>
 				</div>				
 			</div>
@@ -125,3 +151,4 @@
 		</footer>
 		<script src="js/main.js"></script>	
 	</body>
+</html>
