@@ -4,9 +4,13 @@
 		<!-- in head ci va per forza un elemento title, qui metto anche il foglio di stile e i metadati -->
 		<title> Le parole di Vincent van Gogh </title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
-		<meta name="keywords" content="van Gogh, dipinti, lettere">
 		<meta name="author" content="Matilde Camprini">
+		<meta name="title" content="Le parole di Vincent van Gogh">
+		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
+		<meta name="subject" content="van Gogh, dipinti, lettere">
+		<meta name="publisher" content="Matilde Camprini">
+		<meta name="date" content="05-2026">
+		<meta name="language" content="it">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,6 +53,10 @@
 						<li><a href="#benchmark"><h4>Benchmark</h4></a></li>
 						<li><a href="#progettazione"><h4>Progettazione</h4></a></li>
 						<li><a href="#layout"><h4>Layout</h4></a></li>
+						<ul>
+							<li><a href="#architettura"><h5>Architettura</h5></a></li>
+							<li><a href="#wireframe"><h5>Wireframe</h5></a></li>
+						</ul>
 						<li><a href="#usabilità"><h4>Usabilità</h4></a></li>
 						<li><a href="#servizi"><h4>Servizi</h4></a></li>
 						<li><a href="#bibliografia"><h4>Bibliografia e sitografia</h4></a></li>
@@ -58,47 +66,118 @@
 			<div class="rightcolumn bg_yellow">
 	<!-- contenuto WPP -->	
 				<h1> Web Project Plan </h1>
-				<h3 id="brief"> Brief </h3>
-				<p> L’obiettivo del progetto è rendere accessibile l’analisi delle opere d’arte di Vincent van Gogh attraverso le parole dell’autore, il quale scrive in numerose occasioni a suo fratello Theo van Gogh, raccontando aneddoti e suggestioni che hanno ispirato la sua arte e conducendo riflessioni sulla propria vita che sono in grado di far vedere con occhi nuovi i suoi dipinti. </p>
-				<p> Ambiti disciplinari: arte, letteratura </p>
-				<p> Tipo: collezione di risorse quali testi e immagini </p>
-				<p> Il sito è rivolto agli appassionati di arte, ma non si pone l’obiettivo di essere didattico, infatti l’interesse per questa tematica proviene dalla lettura dell’epistolario dell’autore e dal supporto alla lettura riscontrato nella cronologia delle opere, pertanto si è deciso di unire i due elementi per una panoramica unitaria. </p> 
-				<p> L’accesso è libero e i mezzi di comunicazione prescelti sono il PC e il tablet. </p>
-				<p> I contenuti saranno sia in forma testuale, sia grafici come immagini a causa della presenza delle opere in forma digitalizzata; icone e animazioni saranno utilizzate. Si darà spazio ad una mappa interattiva per mostrare l’attività dell’autore in relazione ai suoi numerosi spostamenti e ad una linea cronologica per la datazione degli scritti. I contenuti saranno presi da (vedi LICENZE)</p>
+				<h2 id="brief"> Brief </h2>
+				<p> <b>L’obiettivo del progetto</b> è rendere accessibile l’analisi delle opere d’arte di Vincent Van Gogh attraverso le parole dell’autore, il quale scrive in numerose occasioni a suo fratello Theo van Gogh, raccontando aneddoti e suggestioni che hanno ispirato la sua arte e conducendo riflessioni sulla propria vita che sono in grado di far vedere con occhi nuovi i suoi dipinti.</p>
+				<p>Gli ambiti disciplinari interessati sono <b>arte e letteratura</b>.</p>
+				<p>In quanto a tipo di sito questo si presenta come una <b>collezione di risorse</b> quali testi e immagini.</p>
+				<p>Il sito è rivolto agli <b>appassionati di arte</b> o anche solo a chi è interessato alla correlazione tra gli scritti e i dipinti di Van Gogh, ma non si pone l’obiettivo di essere didattico, infatti l’interesse per questa tematica proviene dalla lettura dell’<b>epistolario dell’autore</b> e dal supporto alla lettura riscontrato nella cronologia delle opere, pertanto si è deciso di unire i due elementi per una panoramica unitaria. <p> 
+				<p>L’<b>accesso</b> è libero e i mezzi di comunicazione prescelti sono il PC e il tablet, dal momento che nel sito si includono anche immagini di manoscritti che non sarebbero pienamente apprezzabili su schermi più piccoli. </p>
+				<p>I <b>contenuti</b> saranno sia in forma testuale, sia grafici come immagini a causa della presenza delle opere in forma digitalizzata; animazioni e icone saranno utilizzate. <br>Si darà spazio ad una mappa interattiva per mostrare l’attività dell’autore in relazione ai suoi numerosi spostamenti e ad una linea cronologica per la datazione degli scritti.</p>
+				<p>I contenuti saranno presi principalmente dal sito ufficiale del Van Gogh Museum di Amsterdam, al quale si riservano tutti i diritti delle opere, e da Wikipedia, che permette la ricondivisione con la licenza Creative Commons.</p>
 
-				<h3 id="benchmark"> Benchmark </h3>
-				<p> Esistono diversi siti che si occupano della produzione di Vincent van Gogh: </p> 
-				<p> <a href="https://vangoghletters.org/vg/letters.html"> Van Gogh Letters </a></p>
-				<p> Come sito è ricco ma ha un’interfaccia piuttosto datata, è poco user-friendly e non dà la possibilità di vedere i testi in italiano. </p>
-				<p> <a href="https://vangoghworldwide.org/"> Van Gogh Worldwide </a></p>
-				<p> Questo sito ha un’interfaccia migliore, utilizza tools di ricerca integrativi, ma mostra solo i dipinti e non le lettere dell’autore. </p> 
-				<p> <a href="https://www.vangoghmuseum.nl/en/"> Van Gogh Museum </a> </p>
-				<p> Quest'ultimo è curato direttamente dal museo di van Gogh ad Amsterdam, ricchissimo di opere, ha un’interfaccia bella e semplice da usare e riporta le immagini delle lettere inviate, ma queste non sono trascritte o tradotte. </p>
-				<p>I contenuti saranno presi da (vedi LICENZE)</p>
+				<h2 id="benchmark"> Benchmark </h2>
+				<p>Esistono diversi siti che si occupano della produzione di Vincent van Gogh: </p> 
+				<p> <a href="https://vangoghletters.org/vg/letters.html" title="sito Van Gogh Letters"> Van Gogh Letters </a></p>
+				<p>Questo sito si occupa delle lettere di Van Gogh, è molto ricco di materiali ma ha un’interfaccia piuttosto datata, poco user-friendly e non offre la possibilità di vedere i testi in italiano. </p>
+				<p> <a href="https://vangoghworldwide.org/" title="sito Van Gogh Worldwide">Van Gogh Worldwide </a></p>
+				<p>Questo sito si occupa invece delle opere artistiche dell’autore, ha un’interfaccia migliore, utilizza tools di ricerca integrativi, ma mostra solo i dipinti e gli schizzi e non le lettere dell’autore. </p> 
+				<p> <a href="https://www.vangoghmuseum.nl/en/" title="sito Van Gogh Museum">Van Gogh Museum </a> </p>
+				<p>Questo sito è curato direttamente dal museo di Van Gogh ad Amsterdam, ricchissimo di opere, ha un’interfaccia bella e semplice da usare e riporta le immagini delle lettere inviate, ma queste non sono né trascritte né tradotte. </p>
 
-				<h3 id="progettazione"> Progettazione </h3>
-				<p> lorem ipsum </p> 
+				<h2 id="progettazione">Progettazione</h2>
+				<h3>Mappa concettuale e schema delle dipendenze</h3>
+				<img class="WPP" src="img/layout/mappa_e_schema.png" alt="Mappa concettuale e schema delle dipendenze">
+				<p>La mappa concettuale e lo schema delle dipendenze sono state realizzate attraverso il programma <a href="https://www.canva.com/" title="sito di Canva">Canva</a>.</p> 
+				<h3>Categorie</h3>
+				<p> Le categorie utilizzate per la descrizione degli elementi sono state scelte seguendo il sistema Dublin Core:</p>
+				<div class="WPP">
+					<ul>
+						<li><b>Titolo</b> - per le opere si riporterà il titolo, mentre per le lettere si dirà "Lettera a Theo del (data)"</li>
+						<li><b>Autore</b> - in questo caso sarà sempre Vincent Van Gogh</li>
+						<li><b>Tipo</b> - qui si avrà la distinzione tra lettera e dipinto</li>
+						<li><b>Data di creazione</b> - per le lettere sarà spesso la data di spedizione</li>
+						<li><b>Luogo di creazione</b> - luogo di creazione del dipinto o provenienza della lettera</li>
+						<li><b>Ubicazione</b></li>
+						<li><b>Identificatore</b></li>
+						<li><b>Tecnica</b></li>
+						<li><b>Formato</b> - per la dimensione dell'oggetto</li>
+						<li><b>Soggetto</b> - per le parole chiave</li>
+						<li><b>Relazione</b> - per la relazione con altri oggetti della raccolta</li>
+					</ul>
 
-				<h3 id="layout"> Layout </h3>
-				<p> lorem ipsum </p> 
+				<h2 id="layout"> Layout </h2>
+				<h3 id="architettura">Architettura della pagina</h3>
+				<h4>Elementi della pagina</h4>
+				<p> L'<b>architettura d'interfaccia</b> prevede l’intestazione, la barra di navigazione primaria e, quando presente, la barra di navigazione secondaria, situata al lato della pagina, che saranno sempre nella stessa posizione per non disorientare l’utente; lo stesso vale per il piè di pagina.</p> 
+				<p>Il <b>corpo della pagina</b> ha un layout coerente nelle varie pagine, con lo sfondo, il font e i colori del testo utilizzati nello stesso modo. Il corpo ha ovviamente specifiche caratteristiche in base all’obiettivo comunicativo della pagina in esame.</p>
+				<p>Per il <b>catalogo</b> si è scelto in particolare di utilizzare delle <i>tab</i> in modo da visualizzare in modo alternativo le opere o le lettere dell’autore, con i relativi titoli, accompagnandolo ad una pagination nel caso in cui dovessero entrare più elementi a far parte della raccolta.</p>
+				<p>Il corpo della pagina dell’<b>item</b>, nel caso in cui questo fosse una lettera, invece prevede l’utilizzo di una <i>flip card</i> in modo da poter mostrare da un lato l’immagine del manoscritto e dall’altro lato la trascrizione e traduzione in italiano della lettera in questione. <br>Nel caso in cui la lettera avesse una trascrizione più lunga è previsto l’utilizzo di una barra di scorrimento per il testo. <br>Se avessimo invece come oggetto della raccolta nella pagina item un dipinto, allora il retro della flip card potrebbe ospitare una descrizione dell’opera</p>
+				<p>Per quanto riguarda la pagina dei <b>dati</b> il corpo occupa tutto lo spazio, data la rilevanza della tabella con i metadati degli oggetti inclusi nella raccolta.</p>
+				<h4>Elementi di navigazione</h4>
+				<p>La <b>barra di navigazione primaria</b>, integrata nella testata, ospita sei collegamenti per non risultare più pesante del necessario all’utente, utilizza icone evocative e la pagina che si sta visitando compare come attiva.</p>
+				<p>In alcune pagine del sito troviamo una <b>barra di navigazione laterale</b> (in posizione fissa) con diverse funzioni di ricerca. </p>
+				<p>Nella pagina dedicata al <b>progetto</b> questa offre i riferimenti interni alla sezione di testo, mentre nella pagina <b>catalogo</b> è presente un accordion con i riferimenti alle fasi della vita e ai luoghi di attività. <br> Nella pagina <b>item</b> la barra laterale non ha più la funzione di navigazione secondaria ma espone i dati relativi all’opera.</p>
+				<p>Troviamo una <b>navigazione contestuale</b> nella pagina del <b>catalogo</b>, con dei link potenzialmente utili all’utente interessato ad informazioni aggiuntive che non avrei potuto includere con lo stesso grado di approfondimento, o per riferimenti ad altre collezioni.</p>
+				<p>Le <b><i>breadcrumbs</i></b> sono presenti in ogni pagina, allo scopo di dare sempre una chiara indicazione della struttura gerarchica delle pagine del sito all’utente, in modo da potersi orientare o tornare indietro attraverso di esse.</p>
+				<p>La <b>metanavigazione</b> è riservata al piè di pagina, con informazioni che riguardano le licenze e il progetto.</p>
+				<p>Il progetto prevede due ulteriori pagine dedicate a servizi integrativi di navigazione secondaria, ovvero la <b>linea del tempo</b> e la <b>mappa dei luoghi</b>, anche queste strutturate per essere più funzionali possibile agli scopi del sito.</p>
+				<h3 id="wireframe">Wireframe</h3>
+				<p>La progettazione presentata qui non rispecchia totalmente il layout finale delle pagine, dal momento che alcuni strumenti e cambiamenti sono stati aggiunti in corso d’opera. I wireframe sono stati realizzati attraverso il programma <a href="https://wireframe.cc" title="sito di Wireframe.cc"> Wireframe.cc </a></p>
+				<ul>
+					<li><a href="https://wireframe.cc/1BtaQI" title="Wireframe della home" target="_blank">Wireframe della pagina home</a></li>
+					<li><a href="https://wireframe.cc/aBUImW" title="Wireframe del catalogo" target="_blank">Wireframe della pagina catalogo</a></li>
+					<li><a href="https://wireframe.cc/UgfwK9" title="Wireframe del progetto" target="_blank">Wireframe della pagina progetto</a></li>
+					<li><a href="https://wireframe.cc/WyOeJI" title="Wireframe dell'item" target="_blank">Wireframe della pagina item</a></li>
+					<li><a href="https://wireframe.cc/BU2kwm" title="Wireframe dei luoghi" target="_blank">Wireframe della pagina "i luoghi"</a></li>
+					<li><a href="https://wireframe.cc/8rq6P6" title="Wireframe dei momenti" target="_blank">Wireframe della pagina "i momenti"</a></li>
+					<li><a href="https://wireframe.cc/PfUQOx" title="Wireframe dei dati" target="_blank">Wireframe della pagina dati</a></li>
+				</ul>
+				<h2 id="usabilità"> Usabilità </h2>
+				<p> Il concetto di usabilità è stato la linea guida della progettazione, come già detto per le scelte di layout i posizionamenti degli elementi sono <b>coerenti</b> e il sito è <b>facilmente navigabile</b> attraverso strumenti diversi, mantenendo comunque sempre riferimento alla struttura gerarchica interna.</p>
+				<p>Viene utilizzato il box di approfondimento per associazione contestuale, sono impiegati vari box di contenuto all’interno dell’architettura del sito e l’utente ha sempre la possibilità di tornare alla home del sito.</p>
+				<p><b>L’aspetto e la tipografia</b> delle pagine seguono lo stesso principio, lo stile è sempre lo stesso. <br>Per quanto riguarda i testi ci si è sforzati per renderli più brevi e chiari possibile, con il testo non giustificato, interlinea grande e, nel caso di testi particolarmente lunghi come nella pagina “Progetto”, si offre una navigazione con riferimenti interni al corpo del testo. </p>
+				<p>In ogni momento all’interno del sito è possibile per l’utente vedere dove si trova, infatti la barra di navigazione primaria offre un <b>feedback</b>.</p>
+				<p>Per la struttura dei testi si è cercato di dare sempre una <b>struttura gerarchica interna</b> con titoli, sottotitoli e liste, utilizzando link e immagini per spezzare il blocco di testo. <br> In alcuni punti si utilizza il grassetto per la lettura selettiva, enfatizzando le parole chiave o i punti più rilevanti.</p>
+				<p>Infine vengono utilizzati sempre gli attributi <b>@alt</b> per le immagini, per consentire l’accessibilità a persone con disabilità, e <b>@title</b> per i link e le immagini.</p>
+				<p>I <b>colori</b> sono stati scelti principalmente per il loro contrasto tra tonalità calde per i contenuti e colori freddi per la navigazione secondaria.</p>
+				<p>Il <b>font</b> è stato scelto all’interno della libreria <a href="https://fonts.google.com/" title="pagina di Google Fonts">Google Fonts</a> per essere sicuro per il web, ma comunque è stato inserito un fallback in caso il browser non dovesse supportarlo.</p>
+				<p>Allo stesso modo le <b>icone</b> sono state scelte dalla libreria di <a href="https://fontawesome.com/v4/icons/" title="pagina di Font Awsome">Font Awsome</a> in modo da essere sicure, e si è cercato di renderle evocative. </p> 
 
-				<h3 id="usabilità"> Usabilità </h3>
-				<p> lorem ipsum </p> 
+				<h2 id="servizi"> Servizi </h2>
+				<p>Ulteriori <b>strumenti di browsing</b> sono previsti, come la linea del tempo nella pagina <a href="timeline.html">“I momenti”</a> e la mappa dei luoghi nella pagina <a href="luoghi.html">“I luoghi”</a>, per consentire un approccio diverso e forse più interessante all’esplorazione delle risorse. </p>
+				<p>Una funzione ulteriore che sarebbe possibile e interessante inserire è la navigazione per <b>parole chiave</b>, in quanto ci sono diversi temi ricorrenti nelle opere dell’artista.</p>
+				<p>Quanto a strumenti di <b>interazione</b> il sito utilizza bottoni, tabs nel catalogo, cards nella home e nell’item, accordion, tooltips per i link ed effetti sulle immagini (overlay nella navigazione secondaria della home e zoom sull’immagine della sezione hero nella stessa pagina).</p>
+				<p>Penso che in una prospettiva di sviluppo futuro del sito sarebbe interessante, qualora entrassero più testi a far parte della collezione, integrare uno strumento di <b>analisi testuale</b> su di essi (come ad esempio indici di frequenza e collocazioni) dal momento che l’artista riesamina più volte gli stessi temi nel corso della sua vita.</p>
 
-				<h3 id="servizi"> Servizi </h3>
-				<p> lorem ipsum </p> 
 
-				<h3 id="bibliografia"> Bibliografia e sitografia </h3>
-				<p> lorem ipsum </p> 
+				<h2 id="bibliografia"> Bibliografia e sitografia </h2>
+				<ul>
+					<h4>Bibliografia</h4> 
+					<li>Van Gogh, Vincent, <i>Lettere a Theo</i>. A cura di Massimo Cescon, traduzione di Marisa Donvito e Beatrice Casavecchia, Guanda, 2016</li>
+					<h4>Sitografia</h4> 
+					<li><a href="https://www.vangoghmuseum.nl/en" title="Sito del Van Gogh museum di Amsterdam"> https://www.vangoghmuseum.nl/en</a></li>
+					<li><a href="https://it.wikipedia.org/wiki/Opere_di_Vincent_van_Gogh" title="Pagina Wikipedia delle opere di Vincent van Gogh"> https://it.wikipedia.org/wiki/Opere_di_Vincent_van_Gogh</a></li>
+					<li><a href="https://www.illibraio.it/wp-content/uploads/2016/06/9788823506015.pdf" title="PDF di Lettere a Theo"> https://www.illibraio.it/wp-content/uploads/2016/06/9788823506015.pdf</a></li>
+					<li><a href="https://it.wikipedia.org/wiki/Vincent_van_Gogh" title="Pagina Wikipedia Vincent van Gogh"> https://it.wikipedia.org/wiki/Vincent_van_Gogh</a></li>
+					<li><a href="https://it.wikipedia.org/wiki/Theodorus_van_Gogh" title="Pagina Wikipedia Theodorus van Gogh"> https://it.wikipedia.org/wiki/Theodorus_van_Gogh</a></li>
+				</ul> 
 			</div>
 		</div>
 <!-- footer -->
 		<footer class="bg_teal">
 			<div class="credits"> 
-				<p> <a href="#" target="_blank">Credits</a> | <a href="#">Licenze </a>| <a href="progetto.html">Web Project Plan</a> </p>
+				<p><a href="progetto.html">Web Project Plan</a> | Contatti: matildecamprini@studio.unibo.it</p>
 			</div>
 			<div class="copyright">
 				<p> &copy; Copyright (c) 2026 by Matilde Camprini. </p>
+				<p>
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                <img alt="Licenza Creative Commons" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+		            </a>Licenza 
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale
+		            </a>
+		        </p>
 				<p> <a href="#top"> Torna su </a></p>
 			</div>
 		</footer>
