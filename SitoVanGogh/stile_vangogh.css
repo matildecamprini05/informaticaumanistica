@@ -154,7 +154,7 @@ header {
 }
 
 /* FOOTER */
-.footer {
+footer {
 	position: relative;
   clear: both;
   width: 100%;
@@ -249,14 +249,14 @@ ul.breadcrumb li a:hover {
 	position: sticky;
   width: 100%;
   z-index: 1;
-  top: 20px;
+  top: 10px;
   left: 10px;
   overflow-x: hidden;
   padding: 10%;
   color: #001d4a;
 }
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 3px;
   text-decoration: none;
   font-size: 17px;
   color: #001D4A;
@@ -283,6 +283,15 @@ ul.breadcrumb li a:hover {
 .sidenav button:hover {
 	background-color: #197278;
 	color: white;
+}
+.sidenav ol, .sidenav ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.WPP{
+	width: 100%;
+	height: auto;
+	border-radius: 13px;
 }
 /* CATALOGO */
 /* tab catalogo*/
@@ -336,6 +345,7 @@ ul.breadcrumb li a:hover {
 .column p {
 	margin-top: 0px;
 	text-align: right;
+	font-weight: bold;
 }
 .column img {
   margin-top: 8px;
@@ -373,7 +383,7 @@ ul.breadcrumb li a:hover {
   margin: 0 4px;
   border-radius: 5px;
 }
-.pagination li a.active {
+.pagination li a.attiva {
   background-color: #e6b319;
   color:#4A2C00;
 }
@@ -409,7 +419,11 @@ ul.breadcrumb li a:hover {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
+/* crediti delle immagini */
+.imgcredits {
+	margin-top: 0;
+	font-size: 10px;
+}
 /* ITEM */
 .dati {
 	color: #001D4A;
@@ -418,14 +432,14 @@ ul.breadcrumb li a:hover {
 	box-sizing: border-box;
 }
 /* table dati */
-table {
+.tab_item {
 	font-size: 17px;
 	color: #001D4A;
 }
-table a {
+.tab_item a {
 	font-size: 12px;
 }
-table img {
+.tab_item img {
 	max-width: 300px;
 	height: auto;
 }
@@ -709,18 +723,22 @@ table img {
   border: 1px solid #3891A6;
   background-color: #c6e4ec;
 }
-th, td {
+.data_table th, .data_table td {
   text-align: left;
   padding: 15px;
 }
-tr:nth-child(even) {
-  background-color: #3891A6;
+.data_table tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+.data_table tr:hover {
+	background-color: #197278;
+	color: whitesmoke;
 }
 .data_table a {
 	font-size: 20px;
 }
 .table_head {
-	background-color: #001d4a;
+	background-color: #197278;
 	color: whitesmoke;
 	font-size: 22px;
 	font-weight: bold;

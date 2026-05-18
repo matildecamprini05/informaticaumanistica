@@ -4,9 +4,13 @@
 		<!-- in head ci va per forza un elemento title, qui metto anche il foglio di stile e i metadati -->
 		<title> Le parole di Vincent van Gogh </title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
-		<meta name="keywords" content="van Gogh, dipinti, lettere">
 		<meta name="author" content="Matilde Camprini">
+		<meta name="title" content="Le parole di Vincent van Gogh">
+		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
+		<meta name="subject" content="van Gogh, dipinti, lettere">
+		<meta name="publisher" content="Matilde Camprini">
+		<meta name="date" content="05-2026">
+		<meta name="language" content="it">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -65,10 +69,18 @@
 		<!-- footer -->
 		<footer class="bg_teal">
 			<div class="credits"> 
-				<p> <a href="#" target="_blank">Credits</a> | <a href="#">Licenze </a>| <a href="progetto.html">Web Project Plan</a> </p>
+				<p><a href="progetto.html">Web Project Plan</a> | Contatti: matildecamprini@studio.unibo.it</p>
 			</div>
 			<div class="copyright">
 				<p> &copy; Copyright (c) 2026 by Matilde Camprini. </p>
+				<p>
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                <img alt="Licenza Creative Commons" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+		            </a>Licenza 
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale
+		            </a>
+		        </p>
 				<p> <a href="#top"> Torna su </a></p>
 			</div>
 		</footer>
@@ -138,13 +150,13 @@
 			}).addTo(map);
 
 
-        // Aggiungi marker con popup per ogni luogo
+        // aggiunge marker con popup per ogni luogo
 			luoghiVanGogh.forEach(function(luogo) {
 			    var marker = L.marker(luogo.coordinate).addTo(map);
 			    marker.bindPopup(`
 			        <b>${luogo.nome}</b><br>
 			        ${luogo.descrizione}<br>
-			        <i>📅 ${luogo.anno}</i>
+			        <i>${luogo.anno}</i>
 			    `);
 			});
 
