@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- in head ci va per forza un elemento title, qui metto anche il foglio di stile e i metadati -->
+		<title> Le parole di Vincent van Gogh </title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Matilde Camprini">
+		<meta name="title" content="Le parole di Vincent van Gogh">
+		<meta name="description" content="Sito dedicato alla produzione epistolare e artistica di van Gogh">
+		<meta name="subject" content="van Gogh, dipinti, lettere">
+		<meta name="publisher" content="Matilde Camprini">
+		<meta name="date" content="05-2026">
+		<meta name="language" content="it">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="stile_vangogh.css">
+	</head>
+
+	<body>
+		<div>
+			<header class="bg_yellow"> 
+				<div class="header_img">
+					<a href="index.html">
+						<img src="img/layout/autografo.svg.png" alt="Autografo di van Gogh" title="Autografo di van Gogh">
+					</a>
+				</div>
+				
+				<div class="topnav bg_yellow"> 
+					<a href="index.html" > <i class="fa">&#xf015;</i> Home </a>
+					<a href="progetto.html"> <i class="fa">&#xf1fc;</i> Progetto </a>
+					<a href="catalogo.html"> <i class="fa">&#xf12e;</i> Catalogo </a>
+					<a href="timeline.html"> <i class="fa">&#xf073;</i> I momenti </a>
+					<a href="luoghi.html"> <i class="fa">&#xf276;</i> I luoghi </a>
+					<a href="dati.html" class="pagina"> <i class="fa">&#xf085;</i> Dati </a>
+				</div>
+			</header>
+		</div>
+	<!-- breadcrumbs -->
+		<div> 
+			<ul class="breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li>Dati</li>
+			</ul>
+		</div>
+		<h1 class="datititolo"> Metadati della collezione </h1>
+		<h4 class="datititolo">Qui puoi vedere le lettere e le opere presenti nel sito con le relative informazioni.</h4>
+	<!-- div per allineare bottone e search bar -->
+		<div class="row">
+	<!-- bottone per scaricare metadati -->
+			<div class="download_btn"> 
+				<a href="dati.csv" download> Scarica CSV </a>
+			</div>
+	<!-- search bar -->
+			<div class="search_wrapper">
+				<label for="search">Cerca nei dati</label>
+				<input id="search" type="text" placeholder="Search..">
+			</div>
+		</div>
+	<!-- tabella -->
+		<table id="myTable" class="data_table">
+			<tr class="table_head">
+			    <th onclick="sortTable(0)">Titolo <i class="fa">&#xf0b0;</i></th>
+			    <th onclick="sortTable(1)">Data <i class="fa">&#xf0b0;</i></th>
+			    <th onclick="sortTable(2)">Luogo <i class="fa">&#xf0b0;</i></th>
+			    <th>Tipo</th>
+			    <th>Risorsa</th>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 10 settembre 1888</td>
+			    <td>1888, 10 settembre</td>
+			    <td>Arles</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_10_9_1888.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 9 aprile 1885</td>
+			    <td>1885, 9 aprile</td>
+			    <td>Nuenen</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_1885.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 23 dicembre 1888</td>
+			    <td>1888, 23 dicembre</td>
+			    <td>Arles</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_23_12_1888.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 16 ottobre 1888</td>
+			    <td>1888, 16 ottobre</td>
+			    <td>Arles</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_16_10_1888.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 22 marzo 1889</td>
+			    <td>1889, 22 marzo</td>
+			    <td>Arles</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_22_3_1889.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>Lettera a Theo del 23 luglio 1890</td>
+			    <td>1890, 23 luglio</td>
+			    <td>Auvers-sur-Oise</td>
+			    <td>lettera</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/lettere/lettera_23_7_1890.pdf" target="_blank">PDF</td>
+			</tr>
+			<tr>
+			    <td>I mangiatori di patate</td>
+			    <td>1885, aprile-maggio</td>
+			    <td>Nuenen</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/mangiatori_di_patate.jpg" target="_blank">JPG</td>
+			</tr>
+			<tr>
+			    <td>Girasoli</td>
+			    <td>1888, agosto-settembre</td>
+			    <td>Arles</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/girasoli.jpg" target="_blank">JPG</td>
+			</tr>
+			<tr>
+			    <td>Camera di Vincent ad Arles</td>
+			    <td>1888, ottobre</td>
+			    <td>Arles</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/la_camera_di_vincent.jpg" target="_blank">JPG</td>
+			</tr>
+			<tr>
+			    <td>La casa gialla</td>
+			    <td>1888, settembre</td>
+			    <td>Arles</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/la_casa_gialla.jpg" target="_blank">JPG</td>
+			</tr>
+			<tr>
+			    <td>Campo di grano con corvi</td>
+			    <td>1890, luglio</td>
+			    <td>Auvers-sur-Oise</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/campo_di_grano_con_corvi.jpg" target="_blank">JPG</td>
+			</tr>
+			<tr>
+			    <td>Iris</td>
+			    <td>1889, marzo</td>
+			    <td>Arles</td>
+			    <td>dipinto</td>
+			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/SitoVanGogh/img/dipinti/iris.jpg" target="_blank">JPG</td>
+			</tr>
+		</table>
+	<!-- footer -->
+		<footer class="bg_teal">
+			<div class="credits"> 
+				<p><a href="progetto.html">Web Project Plan</a> | Contatti: matildecamprini@studio.unibo.it</p>
+			</div>
+			<div class="copyright">
+				<p> &copy; Copyright (c) 2026 by Matilde Camprini. </p>
+				<p>
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                <img alt="Licenza Creative Commons" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+		            </a>Licenza 
+		            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		                Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale
+		            </a>
+		        </p>
+				<p> <a href="#top"> Torna su </a></p>
+			</div>
+		</footer>
+		<script src="js/main.js"></script>	
+	</body>
+</html>
+		
