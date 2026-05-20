@@ -38,7 +38,9 @@
 				</div>
 			</header>
 		</div>
+<!-- divisione in due parti allineate della pagina -->
 		<div class="row">
+		<!-- left column con breadcrumbs e sidenav con elenco dei luoghi -->
 			<div class="leftcolumn"> 
 				<div> 
 					<ul class="breadcrumb">
@@ -59,6 +61,7 @@
 					</ul>
 				</div>
 			</div>
+		<!-- rightcolumn con la mappa -->
 			<div class="rightcolumn">
 				<h1> Mappa dei luoghi </h1>
 				<div class="mapcontainer">
@@ -84,7 +87,9 @@
 				<p> <a href="#top"> Torna su </a></p>
 			</div>
 		</footer>
+<!-- Script interno -->
 		<script> 
+			// dichiaro array di variabili con dentro i vari dati da esplicitare
 			var luoghiVanGogh = [
 			    {
 			        nome: "Zundert (Paesi Bassi)",
@@ -141,16 +146,18 @@
 			        anno: "1890"
 			    }
 			];
-
+			
+			// dichiaro la mappa con una setview sulla francia
 			var map = L.map('map').setView([48.8566, 2.3522], 5)
-
+			
+			// come mappa di "sfondo" uso quella di openstreetmap
 			L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			    maxZoom: 19,
 			    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 			}).addTo(map);
 
 
-        // aggiunge marker con popup per ogni luogo
+        // aggiungo marker con un popup per ogni luogo
 			luoghiVanGogh.forEach(function(luogo) {
 			    var marker = L.marker(luogo.coordinate).addTo(map);
 			    marker.bindPopup(`
@@ -159,7 +166,9 @@
 			        <i>${luogo.anno}</i>
 			    `);
 			});
-
+			// si potrebbero aggiungere i link agli item dentro i popup, oppure anche collegarli all'elenco dei luoghi (rendendoli link) e al click sul link si apre il popup relativo
+		
+		// metto la visualizazione tale che includa tutti i markers
 			var gruppoMarkers = L.featureGroup(markers);
 			map.fitBounds(gruppoMarkers.getBounds().pad(0.2));
 
