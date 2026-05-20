@@ -14,24 +14,24 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// tab 
+// tab (nomi sono quelli di w3schools)
 function openCity(evt, cityName) {
-  // Declare all variables
+  // dichiaro variabili
   var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
+  // elementi con class="tabcontent" da nascondere
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
+  // elementi class="tablinks" senza "active"
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
+  // mostro tab cliccata/attiva, aggiuno "active" come classe al bottone che l'ha aperta
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
@@ -41,65 +41,59 @@ window.addEventListener('scroll', function() {
         var hero = document.querySelector('.hero_image');
         var scrollY = window.scrollY;
         
-        // Calcola lo zoom: parte da 100% e arriva fino a 130%
-        // Maggiore è scrollY, più si zoomma
+        // calcola zoom: parte da 100% e arriva fino a 130%
+        // maggiore è scrollY, più si zoomma
         var zoomLevel = 100 + (scrollY * 0.06);
         
-        // Limita lo zoom massimo (evita che diventi troppo grande)
+        // limita lo zoom massimo (evita che diventi troppo grande)
         if (zoomLevel > 130) zoomLevel = 130;
         if (zoomLevel < 100) zoomLevel = 100;
         
         hero.style.backgroundSize = zoomLevel + '%';
     });
 
-// sort table 
+// sort table, cliccando l'header della colonna si sistemano i contenuti della colonna
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
   switching = true;
-  //Set the sorting direction to ascending:
+  //direzione ascendente:
   dir = "asc"; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
+  //loop per far continuare finchè non smettono di switchare
   while (switching) {
-    //start by saying: no switching is done:
+    //all'inizio dire nessuno switching:
     switching = false;
     rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
+    // loop per tutte le righe tranne la prima (header)
     for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
+      //inizio dicendo che non deve switchare
       shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
+      //prendi elementi da comparare sulla linea corrente e sulla seguente
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
+      //guarda se dovrebbero switchare
       if (dir == "asc") {
         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
+          //se devono fai lo switch e finisci il loop
           shouldSwitch= true;
           break;
         }
       } else if (dir == "desc") {
         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
+          //vedi sopra
           shouldSwitch = true;
           break;
         }
       }
     }
     if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
+      // se lo switch è fatto marcalo come fatto
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
-      //Each time a switch is done, increase this count by 1:
+      //e quindi aumenta il conto
       switchcount ++;      
     } else {
-      /*If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again.*/
+      //se non ci sono switch e direzione è asc, cambia la dirzione e fallo di nuovo.
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
