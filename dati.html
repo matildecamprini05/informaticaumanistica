@@ -36,28 +36,28 @@
 				</div>
 			</header>
 		</div>
-	<!-- breadcrumbs -->
+	<!-- breadcrumbs e titolo della pagina -->
 		<div> 
 			<ul class="breadcrumb">
 				<li><a href="index.html">Home</a></li>
 				<li>Dati</li>
 			</ul>
 		</div>
-		<h1 class="datititolo"> Metadati della collezione </h1>
+		<h1 class="datititolo">Metadati della collezione</h1>
 		<h4 class="datititolo">Qui puoi vedere le lettere e le opere presenti nel sito con le relative informazioni.</h4>
-	<!-- div per allineare bottone e search bar -->
+<!-- div per allineare bottone e search bar -->
 		<div class="row">
 	<!-- bottone per scaricare metadati -->
 			<div class="download_btn"> 
 				<a href="dati.csv" download> Scarica CSV </a>
 			</div>
-	<!-- search bar -->
+	<!-- search bar, vedi file javascript per funzionamento -->
 			<div class="search_wrapper">
 				<label for="search">Cerca nei dati</label>
 				<input id="search" type="text" placeholder="Search..">
 			</div>
 		</div>
-	<!-- tabella -->
+	<!-- tabella, con header filtrabile, vedi file javacript -->
 		<table id="myTable" class="data_table">
 			<tr class="table_head">
 			    <th onclick="sortTable(0)">Titolo <i class="fa">&#xf0b0;</i></th>
@@ -66,6 +66,7 @@
 			    <th>Tipo</th>
 			    <th>Risorsa</th>
 			</tr>
+		<!-- altri row della tabella con dati effettivi, i link rimandano al mio github -->
 			<tr>
 			    <td>Lettera a Theo del 10 settembre 1888</td>
 			    <td>1888, 10 settembre</td>
@@ -151,6 +152,7 @@
 			    <td><a href="https://github.com/matildecamprini05/informaticaumanistica/blob/main/img/dipinti/iris.jpg" target="_blank">JPG</td>
 			</tr>
 		</table>
+		
 	<!-- footer -->
 		<footer class="bg_teal">
 			<div class="credits"> 
