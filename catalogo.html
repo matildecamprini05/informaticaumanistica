@@ -39,16 +39,17 @@
 		<div class="row">
 <!-- left column -->
 			<div class="leftcolumn bg_yellow">
-<!-- breadcrumbs -->
+	<!-- breadcrumbs -->
 				<div> 
 					<ul class="breadcrumb">
 					  <li><a href="index.html">Home</a></li>
 					  <li>Catalogo</li>
 					</ul>
 				</div>
-<!-- side nav con accordion -->
+	<!-- side nav con accordion  -->
 				<div class="sidenav">
 					<h3> Esplora </h3>
+			<!-- accordion, sarebbe bello mettere i filtri anche qui per una ricerca più selettiva (in particolare se entrassero più dati nella raccolta)  -->
 					<button class="accordion">Per date</button>
 					<div class="panel">
 						<ul>
@@ -67,7 +68,7 @@
 						  	<li><a href="#"> Auvers-sur-Oise</a></li>
 						</ul>
 					</div>		
-<!-- link utili -->
+	<!-- link utili -->
 					<h3> Link utili </h3>
 					<a href="https://it.wikipedia.org/wiki/Vincent_van_Gogh" target="_blank" title="Vai alla pagina wikipedia di van Gogh"> Vita di van Gogh </a>
 					<a href="https://www.vangoghmuseum.nl/en" target="_blank" title="Vai alla pagina ufficiale del museo di van Gogh"> Museo di van Gogh </a>
@@ -86,9 +87,9 @@
 				  <button class="tablinks" onclick="openCity(event, 'lettere')">Naviga per lettere </button>
 				  <button class="tablinks" onclick="openCity(event, 'opere')">Naviga per opere </button>
 				</div>
-	<!-- tab content -->
+	<!-- tab content come box di contenimento di tutti gli elementi -->
 				<div id="lettere" class="tabcontent">
-		<!-- galleria -->
+		<!-- galleria lettere divisa in due colonne di uguale ampiezza -->
 					<div class="galleryrow">
 					  	<div class="column">
 						    <img src="img/lettere/lettera_10_9_1888.png" alt="immagine della lettera del 10 settembre 1888" class="zoom">
@@ -112,6 +113,7 @@
            					<p> Auvers-sur-Oise, 23 luglio 1890 </p>
            					<p class="imgcredits">Credits (obliged to state): Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)</p>
 					  	</div>
+		<!-- pagination, da attivare se entrassero più elementi nella raccolta (abbastanza da fare più pagine) -->
 					  	<ul class="pagination">
 							<li><a href="#">&laquo;</a></li>
 							<li><a class="attiva" href="#">1</a></li>
@@ -121,6 +123,7 @@
 						</ul>
 					</div>
 				</div>
+		<!-- galleria opere divisa in due colonne di uguale ampiezza -->
 				<div id="opere" class="tabcontent">
 				  	<div class="galleryrow">
 					  	<div class="column">
@@ -139,6 +142,7 @@
             				<img src="img/dipinti/iris.jpg" alt="immagine di Iris" class="zoom">
             				<p> Iris </p>
 					  	</div>
+			<!-- pagination (vedi sopra) -->
 					  	<ul class="pagination">
 							<li><a href="#">&laquo;</a></li>
 							<li><a class="attiva" href="#">1</a></li>
