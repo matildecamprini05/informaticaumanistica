@@ -1,36 +1,36 @@
 * {
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* caratteri più sottili */
 }
 
 html, body {
     height: 100%;
     margin: 0;
     color: black;
-    background-color: #ffe05b;
+    background-color: #ffe05b; /* giallo usato per i body */
     font-size: 22px;
 }
 
 .bg_yellow {
-  background-color: #ffe05b;
+  background-color: #ffe05b; /* giallo usato per i body */
 }
 .bg_blue {
-	background-color: #3891A6;
+	background-color: #3891A6; /* azzurro usato per sidenav */
 }
 .bg_teal {
-	background: #197278;
+	background: #197278; /* teal usato per il footer */
 }
 
 /* HEADER */
 header {
-  display: flex; 
-  justify-content: space-between;
+  display: flex; /* element as a block-level flex container */
+  justify-content: space-between; /* flexible container's items, space between items */
   align-items: center;
   padding: 0 20px;
 }
 .header_img img {
-  width: 150px; 
+  width: 150px; /* immagine autografo piccola */
   height: auto;
   padding: 10px;
   display: block;
@@ -38,10 +38,10 @@ header {
 
 /* TOPNAV */
 .topnav {
-    overflow: hidden;
+	overflow: hidden;
 }
 .topnav a {
-	color: #4A2C00;
+	color: #4A2C00;  /* colore marrone delle scritte su fondo giallo */
   text-align: center;
   text-decoration: none;
   padding: 14px 16px;
@@ -50,7 +50,7 @@ header {
   cursor: pointer;
 }
 .topnav a:hover {
-  background-color: #e6b319;
+  background-color: #e6b319; /* colore giallo ocra delle pagine attive */
   color: black;
 }
 /* pagina attiva*/ 
@@ -64,25 +64,25 @@ header {
   height: 100%; 
   width: 100%;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; /* Fondamentale per le immagini Hero */
+  background-repeat: no-repeat; /* perchè non ripeta l'immagine se è più piccola del contenitore */
+  background-size: cover; /* fondamentale per le immagini hero perchè copre tutto lo sfondo */
   position: relative;
-  transition: background-size 0.1s linear;
+  transition: background-size 0.1s linear; /* tempo di transizione per lo zoom */
 }
 .hero_text {
 	width: 40%;
 	padding: 5%;
-	color: #001D4A;
+	color: #001D4A; /* colore blu per scritte su fondo azzurro */
 }
 .hero_button {
-	width: 100%;
+	width: 100%; /* dentro la div hero text per farlo di 40% del totale */
 	height: 40px;
-  border: 1px solid #e6b319;
-  border-radius: 8px;
-  color: #4A2C00;
-  background-color: #ffe05b;
-  cursor: pointer;
-  text-align: center;
+  	border: 1px solid #e6b319;
+  	border-radius: 8px;
+  	color: #4A2C00;
+  	background-color: #ffe05b;
+  	cursor: pointer;
+  	text-align: center;
 }
 .hero_button:hover {
   background-color: #e6b319;
@@ -90,7 +90,7 @@ header {
 .hero_button a {
 	font-size: 20px;
 	font-weight: bold;
-	color: black;
+	color: #4A2C00;
 	padding: 10px;
 }
 
@@ -120,12 +120,11 @@ header {
 }
 .container {
 	float: left;
-  position: relative;
-  width: 50%;
-  max-width: 30%;
-  margin: 20px;
+  	position: relative;
+  	max-width: 30%;
+  	margin: 20px;
  }
-/* immagine responsive */
+/* immagine */
 .image {
   display: block;
   width: 100%;
@@ -139,7 +138,6 @@ header {
   bottom: 100%;
   left: 0;
   right: 0;
-  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   width: 100%;
   height: 0;
@@ -155,15 +153,14 @@ header {
   height: 100%;
 }
 .text {
-  white-space: nowrap; 
   color: whitesmoke;
   font-size: 20px;
   position: absolute;
   overflow: hidden;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* per centrare l'elemento */
+  -ms-transform: translate(-50%, -50%); /* per internet explorer */
 }
 
 /* FOOTER */
