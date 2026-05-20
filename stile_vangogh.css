@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* gestisce larghezza massima */
     font-family: Poppins, sans-serif;
     -webkit-font-smoothing: antialiased; /* caratteri più sottili */
 }
@@ -153,7 +153,7 @@ header {
   height: 100%;
 }
 .text {
-  color: whitesmoke;
+  color: whitesmokesmoke;
   font-size: 20px;
   position: absolute;
   overflow: hidden;
@@ -174,12 +174,16 @@ footer {
   padding: 20px 0;
 }
 .credits, .copyright {
-	color: white;
+	color: whitesmoke;
 	text-align: center;
+	font-size: 17px;
 }
 .credits a, .copyright a{
-	color: #ffe05b;
-	font-style: italic;
+	color: whitesmoke;
+	text-decoration: underline;
+}
+.credits a:hover, .copyright a:hover{
+	color: #001D4A; /* colore blu */
 }
 
 /* SCROLL BAR */
@@ -193,12 +197,12 @@ footer {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #197278; 
+  background-color: #197278; 
   border-radius: 10px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #003380; 
+  background-color: #003380; 
 }
 
 /* PROGETTO */
@@ -210,55 +214,55 @@ footer {
 
 .leftcolumn {
   width: 30%;
-  background-color: #3891A6;
-  box-sizing: border-box;
+  background-color: #3891A6; /* colore azzurro */
+  box-sizing: border-box; /* gestisce larghezza massima */
 }
 
 .rightcolumn {
-  width: 70%;
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 18px;
-	color: #4A2C00;
+  	width: 70%;
+  	padding: 20px;
+ 	box-sizing: border-box; /* gestisce larghezza massima */
+  	font-size: 18px;
+	color: #4A2C00; /* colore delle scritte marroni su bg_yellow */
 	position: relative;
 }
 .rightcolumn a{
 	color: #4A2C00;
 }
 .rightcolumn a:hover{
-	color: #3891A6;
+	color: #3891A6; /* colore azzurro */
 }
 
 /* breadcrumbs */
 ul.breadcrumb {
   padding: 10px 20px;
-  list-style: none;
+  list-style: none; /* no puntini */
   text-align: left;
 }
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
- 	color: white;
+ 	color: whitesmoke;
 }
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: white;
-  content: "/\00a0"; /* add / */
+  content: "/\00a0"; /* metti / */
 }
 ul.breadcrumb li a {
   color: #001D4A;
   text-decoration: none;
 }
 ul.breadcrumb li a:hover {
-  color: white;
+  color: whitesmoke;
   text-decoration: underline;
 }
 
 /* side navigation */
 .sidenav {
-	position: sticky;
+	position: sticky; /* la tiene nella stessa posizione quando scrollo */
   width: 100%;
-  z-index: 1;
+  z-index: 1; /* mette davanti */
   top: 10px;
   left: 10px;
   overflow-x: hidden;
@@ -273,7 +277,7 @@ ul.breadcrumb li a:hover {
   display: block;
 }
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: whitesmoke;
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -283,7 +287,7 @@ ul.breadcrumb li a:hover {
 	width: 100%;
 	height: 50px;
   border: none;
-  color: black;
+  color:  #001D4A;
   font-size: 17px;
   font-weight: bold;
   background-color: #3891A6;
@@ -292,7 +296,7 @@ ul.breadcrumb li a:hover {
 }
 .sidenav button:hover {
 	background-color: #197278;
-	color: white;
+	color: whitesmoke;
 }
 .sidenav ol, .sidenav ul {
   margin-top: 0;
@@ -309,10 +313,11 @@ ul.breadcrumb li a:hover {
   overflow: hidden;
   border: 1px solid #e6b319;
   background-color: #f1f1f1;
+  border-radius: 12px;
 }
 /* bottoni per aprire tab */
 .tab button {
-	color: #4A2C00;
+  color: #4A2C00;
   background-color: #ffe05b;
   font-size: 17px;
   font-weight: bold;
@@ -336,19 +341,20 @@ ul.breadcrumb li a:hover {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #e6b319;
+  border-radius: 12px;
   border-top: none;
 }
 
 /* colonne della galleria catalogo */
 .galleryrow {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* per allineamento */
+  flex-wrap: wrap; /* manda a capo */
   padding: 0 4px;
 }
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 50%;
+  width: 50%;
   max-width: 50%;
   padding: 0 4px;
 }
@@ -383,6 +389,11 @@ ul.breadcrumb li a:hover {
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
+}
+/* crediti delle immagini */
+.imgcredits {
+	margin-top: 0;
+	font-size: 10px;
 }
 
 /* pagination */
@@ -422,32 +433,29 @@ ul.breadcrumb li a:hover {
   background-color: #001d4a;
 }
 .accordion:after {
-  content: '\002B';
+  content: '\002B'; /* mette il + */
   color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 .active:after {
-  content: "\2212";
+  content: "\2212"; /* mette il - */
 }
 .panel {
   padding: 0 18px;
-  max-height: 0;
+  max-height: 0; /* nasconde pannello che poi si deve aprire */
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out; /* animazione quando cambia l'altezza, dura 0.2 secondi, rallenta alla fine */
 }
-/* crediti delle immagini */
-.imgcredits {
-	margin-top: 0;
-	font-size: 10px;
-}
+
 /* ITEM */
+/* contiene la parte con la tabella ma anche il titolo e la descrizione */
 .dati {
 	color: #001D4A;
 	margin-left: 15px;
 	margin-top: 0px;
-	box-sizing: border-box;
+	box-sizing: border-box; /* gestisce larghezza massima */
 }
 /* table dati */
 .tab_item {
@@ -455,7 +463,7 @@ ul.breadcrumb li a:hover {
 	color: #001D4A;
 }
 .tab_item a {
-	font-size: 12px;
+	font-size: 12px; /* piccoli perchè sup */
 }
 .tab_item img {
 	max-width: 300px;
@@ -479,27 +487,27 @@ ul.breadcrumb li a:hover {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transition: transform 0.8s; 
+  transform-style: preserve-3d; /* mantenere 3D */
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg); /* flip orizzontale */
 }
-/* Position the front and back side */
+/* posiziona fronte e retro */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  box-sizing: border-box;  
+  box-sizing: border-box;  /* gestisce larghezza massima */
   top: 0;
   left: 0;
 }
 .flip-card-front img {
 	width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: contain; /* immagine si adatta al contenitore mantenendo le proporzioni (non si deforma) */
   object-position: center;
 }
 /* front side (fallback if image is missing) */
@@ -513,9 +521,9 @@ ul.breadcrumb li a:hover {
 /* back side */
 .flip-card-back {
   transform: rotateY(180deg);
-  overflow-y: auto; /* barra laterale per lettere lunghe*/
+  overflow-y: auto; /* mette una barra laterale per lettere troppo lunghe */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* paragrafi uno sotto l'altro */
 }
 .flip-card-back p {
   margin: 0;
@@ -528,53 +536,53 @@ ul.breadcrumb li a:hover {
 /* TIMELINE */
 .titolo {
 	text-align: center;
-	color: #800020;
+	color: #800020; /* colore bordeaux */
 }
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* The actual timeline (the vertical ruler) */
+/* barra verticale */
 .timeline::after {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #E6B319;
+  background-color: #E6B319; /* colore ocra */
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
 }
-/* Container around content */
+/* container attorno al content (contiene tutto il riquadro rosso e la freccetta) */
 .tl_container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
-/* The circles on the timeline */
+/* cerchietti sulla barra */
 .tl_container::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: white;
+  background-color: whitesmoke;
   border: 4px solid #800020;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
-/* Place the container to the left */
+/* container a sinistra */
 .left {
   left: 0;
 }
-/* Place the container to the right */
+/* container a destra */
 .right {
   left: 50%;
 }
-/* Add arrows to the left container (pointing right) */
+/* frecce container a sinistra */
 .left::before {
   content: " ";
   height: 0;
@@ -584,10 +592,10 @@ ul.breadcrumb li a:hover {
   z-index: 1;
   right: 30px;
   border: medium solid #800020;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #800020;
+  border-width: 10px 0 10px 10px; /* freccia si forma con lo spessore dei bordi */
+  border-color: transparent transparent transparent #800020; /* solo in una direzione è visibile */
 }
-/* Add arrows to the right container (pointing left) */
+/* frecce container a destra */
 .right::before {
   content: " ";
   height: 0;
@@ -600,11 +608,11 @@ ul.breadcrumb li a:hover {
   border-width: 10px 10px 10px 0;
   border-color: transparent #800020 transparent transparent;
 }
-/* Fix the circle for containers on the right side */
+/* cerchio per contenitorii a destra */
 .right::after {
   left: -16px;
 }
-/* The actual content */
+/* content dei riquadri */
 .content {
   padding: 20px 30px;
   color: whitesmoke;
@@ -679,7 +687,7 @@ ul.breadcrumb li a:hover {
 	width: 25%;
 	margin-left: 20px;
 	height: 40px;
-  border: 1px solid #e6b319;
+  border: 1px solid #e6b319; /* bordo dei bottoni gialli */
   border-radius: 8px;
   color: #4A2C00;
   background-color: #ffe05b;
@@ -731,12 +739,12 @@ ul.breadcrumb li a:hover {
 /* table dati */
 .data_table {
 	margin-top: 30px;
-	box-sizing: border-box;
+	box-sizing: border-box; /* gestisce larghezza massima */
 	width: 100%;
 	align-items: center;
 	font-size: 20px;
 	padding: 10px;
-	border-collapse: collapse;
+	border-collapse: collapse; /* unisce i bordi delle celle della tabella */
   border-spacing: 0;
   border: 1px solid #3891A6;
   background-color: #c6e4ec;
@@ -746,7 +754,7 @@ ul.breadcrumb li a:hover {
   padding: 15px;
 }
 .data_table tr:nth-child(even) {
-  background-color: whitesmoke;
+  background-color: whitesmoke; /* zebra table, colori delle righe alternati */
 }
 .data_table tr:hover {
 	background-color: #197278;
@@ -763,7 +771,7 @@ ul.breadcrumb li a:hover {
 	padding: 20px;
 }
 .table_head i {
-	font-size:24px;
+	font-size:24px; /* icona filtro */
 }
 .table_head i:hover {
 	color: #3891A6;
